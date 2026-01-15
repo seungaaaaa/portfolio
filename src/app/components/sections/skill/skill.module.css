@@ -1,0 +1,105 @@
+.skill {
+    background-color: #f3f6fb;
+    min-height: calc(100vh - 80px);
+}
+
+.wrap {
+    padding: 50px 100px;
+}
+
+.title {
+    border-bottom: 3px solid #AEB6C1;
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+.title.on::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg,
+            #7dd3fc,
+            #38bdf8,
+            #bae6fd,
+            #7dd3fc);
+    margin-right: 5px;
+    animation: title 3s linear infinite;
+}
+
+.main {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 150px;
+}
+
+.group {
+    width: 100%;
+    overflow: hidden;
+}
+
+.groupTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.iconUl {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 48px;
+}
+
+.card {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #333;
+}
+
+.subGrid {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    overflow: hidden;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.round {
+    border-radius: 16px;
+}
+
+@keyframes title {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

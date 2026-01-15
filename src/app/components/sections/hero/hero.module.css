@@ -1,0 +1,206 @@
+.hero {
+    height: calc(100vh - 80px);
+    margin-bottom: 200px;
+}
+
+.stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.6;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+.moveCenter {
+    position: relative;
+    padding: 25px;
+    border-radius: 9999px;
+    animation: center 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.moveCenter::after {
+    content: "";
+    position: absolute;
+    inset: -100px;
+    border-radius: inherit;
+    background: radial-gradient(circle at 45% 50%,
+            rgb(255, 255, 255) 20%,
+            rgba(247, 244, 115, 0.87)20%,
+            rgba(255, 214, 232, 0.9) 50%,
+            rgba(156, 229, 223, 0.9) 70%,
+            transparent 85%);
+    filter: blur(40px);
+    opacity: 0.9;
+    z-index: 15;
+    animation: glowSpread 2s ease-out infinite;
+}
+
+.moveText {
+    position: relative;
+    z-index: 20;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.li {
+    list-style: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: float 2s ease-in-out infinite;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.icon1 {
+    top: 5%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.icon2 {
+    bottom: 10%;
+    left: 40%;
+    animation-delay: 4.2s;
+}
+
+.icon3 {
+    bottom: 30%;
+    left: 23%;
+    animation-delay: 4.5s;
+}
+
+.icon4 {
+    top: 13%;
+    right: 37%;
+    animation-delay: 4.7s;
+}
+
+.icon5 {
+    bottom: 40%;
+    right: 25%;
+    animation-delay: 5s;
+}
+
+.icon6 {
+    top: 40%;
+    left: 8%;
+    animation-delay: 5.2s;
+}
+
+.icon7 {
+    bottom: 18%;
+    right: 8%;
+    animation-delay: 6s;
+}
+
+.icon8 {
+    top: 30%;
+    left: 30%;
+    animation-delay: 5.5s;
+}
+
+.icon9 {
+    top: 42%;
+    right: 8%;
+    animation-delay: 6.2s;
+}
+
+.icon10 {
+    top: 20%;
+    right: 20%;
+    animation-delay: 5s;
+}
+
+.icon11 {
+    bottom: 10%;
+    left: 5%;
+    animation-delay: 5s;
+}
+
+.icon12 {
+    top: 5%;
+    left: 42%;
+    animation-delay: 6s;
+}
+
+.icon13 {
+    bottom: 8%;
+    right: 30%;
+    animation-delay: 5s;
+}
+
+.icon14 {
+    top: 8%;
+    right: 6%;
+    animation-delay: 5s;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes center {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glowSpread {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+}
