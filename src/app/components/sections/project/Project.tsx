@@ -79,7 +79,7 @@ const Project = () => {
                 '/stack/JavaScript.svg'
             ],
             img: '/capture/cinema.png',
-            link: 'https://dy-08.github.io/line-cinema/',
+            link: 'https://seungaaaaa.github.io/movie-demo/',
             position: 'TMDB API 영화 데이터를 현재 날짜 기준으로 가공해 상영작·상영예정작과 장르별 목록을 구현하고, Local Storage 기반 예매·예매 조회 기능 및 Window 이벤트를 활용한 인증번호 발급 로직을 담당',
             ppt: '/docs/팀프로젝트.pdf'
         }
@@ -93,7 +93,7 @@ const Project = () => {
             title: '그림판'
         },
         {
-            src: '/capture/balls.png',
+            src: '/capture/ball.png',
             link: 'https://seungaaaaa.github.io/balls/',
             title: '화면보호기 애니메이션'
         },
@@ -157,7 +157,10 @@ const Project = () => {
                             ))}
                         </div>
                         <div className={`${styles.go} ${mainProjects[select].post === '영화관' ? styles.teamProjectGo : ''}`}>
-                            <a className={styles.link} href={mainProjects[select].link}>프로젝트 바로가기</a>
+                            {
+                                mainProjects[select].post === '영화관' ? <a className={styles.link} href={mainProjects[select].link}>예매기능 미리보기</a> :
+                                    <a className={styles.link} href={mainProjects[select].link}>프로젝트 바로가기</a>
+                            }
                             {
                                 mainProjects[select].ppt && (
                                     <a href={mainProjects[select].ppt} className={styles.file}>PPT 파일 보기</a>
@@ -176,7 +179,7 @@ const Project = () => {
                     <div className={styles.canvas} ref={titleRef2}>
                         {
                             canvas.map((item, i) => (
-                                <div className={`${styles.canvasCard} ${styles.canvasCard}${i}`}>
+                                <div className={`${styles.canvasCard} ${styles.canvasCard}${i}`} key={i}>
                                     <div className={styles.captureBox}><a href={item.link}><Image width={500} height={350} sizes='500px' className={styles.captureImg} src={item.src} alt={item.title} /></a></div>
                                     <div>{item.title}</div>
                                 </div>
