@@ -62,11 +62,6 @@
     transition: 0.25s;
 }
 
-.card img {
-    width: 60px;
-    height: 60px;
-}
-
 .card p {
     font-size: 15px;
     color: #333;

@@ -3,6 +3,8 @@ import React, { useLayoutEffect, useRef } from 'react'
 import styles from './hero.module.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
+import { Iansui } from 'next/font/google'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -101,7 +103,7 @@ const Hero = () => {
                     '/stack/GCP-Dark.svg',
                     '/stack/Github-Dark.svg',
                     '/stack/HTML.svg',
-                    '/stack/javaScript.svg',
+                    '/stack/JavaScript.svg',
                     '/stack/JQuery.svg',
                     '/stack/NextJS-Dark.svg',
                     '/stack/NodeJS-Dark.svg',
@@ -120,7 +122,7 @@ const Hero = () => {
                             if (el) iconsRef.current.push(el)
                         }}
                     >
-                        <img src={src} />
+                        <Image fill className={styles.image} alt='icons' src={src} sizes='75px' />
                     </div>
                 ))}
             </div>
