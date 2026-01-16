@@ -195,7 +195,7 @@
     border-bottom: 1px solid #AEB6C1;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
     transition: all 0.5s linear;
     transform: translateX(20px);
     transition: all 0.5s linear;
@@ -208,19 +208,47 @@
 .descTitle {
     font-size: 30px;
 }
-
-.tech {
+.subText {
+    list-style: none;
+}
+.subText::before {
+    content: '✔';
+    padding-right: 10px;
+    color: #3B82F6;
+}
+.techIcons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.teamProjectTech {
+    margin-top: 0;
+}
+.techIcon {
+    width: 40px;
+    height: 40px;
+}
+.go {
+    display: flex;
     margin-top: 20px;
 }
-
+    .teamProjectGo {margin-top: 0;
+}
 .link {
-    font-size: 20px;
+    font-size: 17px;
+    color: #2563EB;
+    display: block;
+    padding: 0 20px 0 0;
+    text-align: center;
 }
 
 .file {
-    margin-top: 10px;
+    border-left: 1px solid #AEB6C1;
     font-size: 17px;
     color: #2563EB;
+    display: block;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .others {

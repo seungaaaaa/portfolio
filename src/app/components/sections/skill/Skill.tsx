@@ -59,6 +59,10 @@ const Skill = () => {
                                     <p>GCP</p>
                                 </li>
                                 <li className={styles.card}>
+                                    <img src="/stack/Github-Dark.svg" alt="GitHub" />
+                                    <p>GitHub</p>
+                                </li>
+                                <li className={styles.card}>
                                     <img src="/stack/Vercel-Dark.svg" alt="Vercel" />
                                     <p>Vercel</p>
                                 </li>
@@ -69,8 +73,8 @@ const Skill = () => {
                             <h3 className={styles.groupTitle} ref={titleRef}>🛠️ Tools</h3>
                             <ul className={styles.iconUl}>
                                 <li className={styles.card}>
-                                    <img src="/stack/Github-Dark.svg" alt="GitHub" />
-                                    <p>GitHub</p>
+                                    <img src="/stack/Github-Dark.svg" alt="dbeaver" />
+                                    <p>DBeaver</p>
                                 </li>
                                 <li className={styles.card}>
                                     <img src="/stack/VSCode-Dark.svg" alt="VS Code" />
